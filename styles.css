@@ -15,7 +15,7 @@ html, body {
 
 .header {
     position: relative;
-    height: 100vh;
+    height: 100dvh; /* Use dynamic viewport height */
     background-image: url('music_header.png');
     background-size: cover;
     background-position: right center; /* Prioritize the right side */
