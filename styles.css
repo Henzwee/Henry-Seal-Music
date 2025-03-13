@@ -146,6 +146,14 @@ html, body {
    Streaming Platform Links
 ---------------------------- */
 
+/* Centering the entire block */
+.streaming-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all child divs horizontally */
+    width: 100%;
+}
+
 /* Apple Music (Pink) */
 .apple-music {
     background-color: black;
