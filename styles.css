@@ -311,7 +311,7 @@ html, body {
         position: relative;
     }
     
-    /* Center text on image and show on tap/hover */
+    /* Center text on image and show on scroll */
     .album-text {
         position: absolute;
         top: 50%;
@@ -324,17 +324,5 @@ html, body {
         text-align: center;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
-    }
-    
-    .album:active .album-text, .album:hover .album-text {
-        opacity: 1;
-    }
-    
-    /* Center the text at the bottom */
-    .streaming-links {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 }
