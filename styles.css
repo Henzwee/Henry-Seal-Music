@@ -14,20 +14,16 @@ html, body {
 }
 
 .header {
-    position: relative;
-    min-height: 100vh;  /* Fallback for older browsers */
-    height: 100lvh;      /* Large viewport height prevents shrinking */
+    position: fixed; /* Fixes the header in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Forces it to remain full height */
     background-image: url('music_header.png');
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
-}
-
-/* Prevent Overlapping UI Elements */
-@supports (height: 100dvh) {
-    .header {
-        height: 100dvh;
-    }
+    z-index: -1; /* Keeps it behind content */
 }
 
 /* Position header text higher */
