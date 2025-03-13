@@ -143,142 +143,40 @@ html, body {
    Streaming Platform Links
 ---------------------------- */
 
-/* Apple Music (Pink) */
-.apple-music {
-    background-color: black;
-    width: 100%;
-    padding: 20px;
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
-.apple-music a {
-    text-decoration: none;
-}
-.apple-music h2 {
-    font-size: 3rem;
-    margin: 0;
-    color: #FF2D55;
-    transition: all 0.3s ease-in-out;
-}
-.apple-music:hover h2 {
-    color: black;
-}
-.apple-music:hover {
-    background-color: #FF2D55;
+    width: 100%;
 }
 
-/* Spotify (Green) */
-.spotify {
-    background-color: black;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-.spotify a {
-    text-decoration: none;
-}
-.spotify h2 {
-    font-size: 3rem;
-    margin: 0;
-    color: #1DB954;
-    transition: all 0.3s ease-in-out;
-}
-.spotify:hover h2 {
-    color: black;
-}
-.spotify:hover {
-    background-color: #1DB954;
+/* Style for each platform */
+.social-links div {
+    width: 50%; /* Adjust width for centering */
+    padding: 10px;
 }
 
-/* Amazon Music (Yellow) */
-.amazon-music {
-    background-color: black;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-.amazon-music a {
+.social-links a {
     text-decoration: none;
-}
-.amazon-music h2 {
-    font-size: 3rem;
-    margin: 0;
-    color: #FF9900;
-    transition: all 0.3s ease-in-out;
-}
-.amazon-music:hover h2 {
-    color: black;
-}
-.amazon-music:hover {
-    background-color: #FF9900;
 }
 
-/* Pandora (Blue) */
-.pandora {
-    background-color: black;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-.pandora a {
-    text-decoration: none;
-}
-.pandora h2 {
+.social-links h2 {
     font-size: 3rem;
     margin: 0;
-    color: #0063B1;
     transition: all 0.3s ease-in-out;
-}
-.pandora:hover h2 {
-    color: black;
-}
-.pandora:hover {
-    background-color: #0063B1;
 }
 
-/* SoundCloud (Orange) */
-.soundcloud {
-    background-color: black;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-.soundcloud a {
-    text-decoration: none;
-}
-.soundcloud h2 {
-    font-size: 3rem;
-    margin: 0;
-    color: #FF5500;
-    transition: all 0.3s ease-in-out;
-}
-.soundcloud:hover h2 {
-    color: black;
-}
-.soundcloud:hover {
-    background-color: #FF5500;
-}
+.apple-music { background-color: black; color: #FF2D55; }
+.spotify { background-color: black; color: #1DB954; }
+.amazon-music { background-color: black; color: #FF9900; }
+.pandora { background-color: black; color: #0063B1; }
+.soundcloud { background-color: black; color: #FF5500; }
+.youtube-music { background-color: black; color: #FF0000; }
 
-/* YouTube Music (Red) */
-.youtube-music {
-    background-color: black;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-.youtube-music a {
-    text-decoration: none;
-}
-.youtube-music h2 {
-    font-size: 3rem;
-    margin: 0;
-    color: #FF0000;
-    transition: all 0.3s ease-in-out;
-}
-.youtube-music:hover h2 {
-    color: black;
-}
-.youtube-music:hover {
-    background-color: #FF0000;
+.social-links div:hover {
+    background-color: white;
 }
 
 /* ----------------------------
