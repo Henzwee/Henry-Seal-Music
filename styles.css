@@ -148,7 +148,6 @@ html, body {
     background-color: black;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 .apple-music a {
     text-decoration: none;
@@ -158,6 +157,7 @@ html, body {
     margin: 0;
     color: #FF2D55;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 .apple-music:hover h2 {
     color: black;
@@ -171,7 +171,6 @@ html, body {
     background-color: black;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 .spotify a {
     text-decoration: none;
@@ -181,6 +180,7 @@ html, body {
     margin: 0;
     color: #1DB954;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 .spotify:hover h2 {
     color: black;
@@ -194,7 +194,6 @@ html, body {
     background-color: black;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 .amazon-music a {
     text-decoration: none;
@@ -204,6 +203,7 @@ html, body {
     margin: 0;
     color: #FF9900;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 .amazon-music:hover h2 {
     color: black;
@@ -217,7 +217,6 @@ html, body {
     background-color: black;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 .pandora a {
     text-decoration: none;
@@ -227,6 +226,7 @@ html, body {
     margin: 0;
     color: #0063B1;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 .pandora:hover h2 {
     color: black;
@@ -240,7 +240,6 @@ html, body {
     background-color: black;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 .soundcloud a {
     text-decoration: none;
@@ -250,6 +249,7 @@ html, body {
     margin: 0;
     color: #FF5500;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 .soundcloud:hover h2 {
     color: black;
@@ -263,7 +263,6 @@ html, body {
     background-color: black;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 .youtube-music a {
     text-decoration: none;
@@ -273,6 +272,7 @@ html, body {
     margin: 0;
     color: #FF0000;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 .youtube-music:hover h2 {
     color: black;
