@@ -15,16 +15,12 @@ html, body {
 }
 
 .header {
-    position: fixed; /* Keep the header fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100dvh; /* Uses dynamic viewport height to prevent resizing */
-    background-image: url('music_header.png');
+    position: relative;
+    min-height: 100vh; /* Keep full height */
+    background-image: url('music_header.png'); /* Default image */
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
-    z-index: -1; /* Push it to the background so content isn't covered */
 }
 
 /* Position header text higher */
