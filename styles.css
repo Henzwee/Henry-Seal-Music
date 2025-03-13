@@ -143,45 +143,142 @@ html, body {
    Streaming Platform Links
 ---------------------------- */
 
-/* Generic Styles for All Music Services */
-.apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
+/* Apple Music (Pink) */
+.apple-music {
     background-color: black;
     width: 100%;
     padding: 20px;
     text-align: center;
-    display: flex; /* Ensures flexbox alignment */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
 }
-
-.apple-music a, .spotify a, .amazon-music a, .pandora a, .soundcloud a, .youtube-music a {
-    display: flex; /* Make links flex containers */
-    justify-content: center; /* Center text inside */
-    align-items: center; /* Align text vertically */
+.apple-music a {
     text-decoration: none;
-    width: 100%; /* Ensures the link takes up the full block */
-    height: 100%;
+}
+.apple-music h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF2D55;
+    transition: all 0.3s ease-in-out;
+}
+.apple-music:hover h2 {
+    color: black;
+}
+.apple-music:hover {
+    background-color: #FF2D55;
 }
 
-/* Individual Styles */
-.apple-music h2 { color: #FF2D55; }
-.spotify h2 { color: #1DB954; }
-.amazon-music h2 { color: #FF9900; }
-.pandora h2 { color: #0063B1; }
-.soundcloud h2 { color: #FF5500; }
-.youtube-music h2 { color: #FF0000; }
-
-.apple-music:hover, .spotify:hover, .amazon-music:hover, .pandora:hover, .soundcloud:hover, .youtube-music:hover {
-    background-color: currentColor;
+/* Spotify (Green) */
+.spotify {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.spotify a {
+    text-decoration: none;
+}
+.spotify h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #1DB954;
+    transition: all 0.3s ease-in-out;
+}
+.spotify:hover h2 {
+    color: black;
+}
+.spotify:hover {
+    background-color: #1DB954;
 }
 
-.apple-music:hover h2,
-.spotify:hover h2,
-.amazon-music:hover h2,
-.pandora:hover h2,
-.soundcloud:hover h2,
+/* Amazon Music (Yellow) */
+.amazon-music {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.amazon-music a {
+    text-decoration: none;
+}
+.amazon-music h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF9900;
+    transition: all 0.3s ease-in-out;
+}
+.amazon-music:hover h2 {
+    color: black;
+}
+.amazon-music:hover {
+    background-color: #FF9900;
+}
+
+/* Pandora (Blue) */
+.pandora {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.pandora a {
+    text-decoration: none;
+}
+.pandora h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #0063B1;
+    transition: all 0.3s ease-in-out;
+}
+.pandora:hover h2 {
+    color: black;
+}
+.pandora:hover {
+    background-color: #0063B1;
+}
+
+/* SoundCloud (Orange) */
+.soundcloud {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.soundcloud a {
+    text-decoration: none;
+}
+.soundcloud h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF5500;
+    transition: all 0.3s ease-in-out;
+}
+.soundcloud:hover h2 {
+    color: black;
+}
+.soundcloud:hover {
+    background-color: #FF5500;
+}
+
+/* YouTube Music (Red) */
+.youtube-music {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.youtube-music a {
+    text-decoration: none;
+}
+.youtube-music h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF0000;
+    transition: all 0.3s ease-in-out;
+}
 .youtube-music:hover h2 {
     color: black;
+}
+.youtube-music:hover {
+    background-color: #FF0000;
 }
 
 /* ----------------------------
