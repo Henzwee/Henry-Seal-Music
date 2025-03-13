@@ -311,15 +311,23 @@ html, body {
         position: relative;
     }
     
-    /* Add overlay effect to make text readable over album images */
+    /* Center text on image and show on tap/hover */
     .album-text {
         position: absolute;
-        bottom: 0;
-        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
         background: rgba(0, 0, 0, 0.25); /* 25% opacity background */
         color: white;
         padding: 10px;
         text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .album:active .album-text, .album:hover .album-text {
+        opacity: 1;
     }
     
     /* Center the text at the bottom */
