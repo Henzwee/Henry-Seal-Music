@@ -288,7 +288,8 @@ html, body {
 @media (min-width: 769px) {
     /* Adjust album text visibility logic for desktop */
     .album-text {
-        opacity: 1; /* Ensure it's always visible on desktop */
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
     }
 }
 
