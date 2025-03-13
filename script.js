@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const rect = text.parentElement.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             
-            if (rect.top < windowHeight * 0.75 && rect.bottom > windowHeight * 0.25) {
+            if (rect.top < windowHeight * 0.75 && rect.bottom > 0) {
                 text.style.opacity = '1';
             } else {
                 text.style.opacity = '0';
