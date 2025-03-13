@@ -284,6 +284,14 @@ html, body {
 /* ----------------------------
    Mobile Styles
 ---------------------------- */
+
+@media (min-width: 769px) {
+    /* Adjust album text visibility logic for desktop */
+    .album-text {
+        opacity: 1; /* Ensure it's always visible on desktop */
+    }
+}
+
 @media (max-width: 768px) {
     /* Adjust "Henry Seal" positioning dynamically */
     .text-container {
