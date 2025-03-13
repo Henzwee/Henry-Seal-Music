@@ -15,11 +15,14 @@ html, body {
 
 .header {
     position: relative;
-    height: 100vh;
+    min-height: 100vh; /* Ensures full height even if viewport changes */
+    height: 100dvh; /* Adjust dynamically for mobile browsers */
     background-image: url('music_header.png');
     background-size: cover;
-    background-position: right center; /* Prioritize the right side */
+    background-position: right center;
+    background-repeat: no-repeat;
 }
+
 
 /* Position header text higher */
 .text-container {
