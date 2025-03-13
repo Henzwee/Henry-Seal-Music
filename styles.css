@@ -5,7 +5,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 100dvh; /* Ensures content starts below the fixed header */
 }
 
 html, body {
@@ -16,11 +15,10 @@ html, body {
 
 .header {
     position: relative;
-    min-height: 100vh; /* Keep full height */
-    background-image: url('music_header.png'); /* Default image */
+    height: 100vh;
+    background-image: url('music_header.png');
     background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
+    background-position: right center; /* Prioritize the right side */
 }
 
 /* Position header text higher */
@@ -144,13 +142,6 @@ html, body {
 /* ----------------------------
    Streaming Platform Links
 ---------------------------- */
-
-.streaming-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers all child divs horizontally */
-    width: 100%;
-}
 
 /* Apple Music (Pink) */
 .apple-music {
