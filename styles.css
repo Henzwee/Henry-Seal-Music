@@ -5,23 +5,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 100dvh; /* Ensures content starts below the fixed header */
 }
 
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    height: auto; /* Allow the page to extend beyond the viewport */
-    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .header {
-    position: relative;
-    min-height: 100vh; /* Ensures it fills the viewport */
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh; /* Uses dynamic viewport height to prevent resizing */
     background-image: url('music_header.png');
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
+    z-index: -1; /* Push it to the background so content isn't covered */
 }
 
 /* Position header text higher */
