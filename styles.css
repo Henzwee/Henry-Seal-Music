@@ -285,57 +285,36 @@ html, body {
    Mobile Styles
 ---------------------------- */
 @media (max-width: 768px) {
-    /* Raise header text further up */
+    /* Adjust "Henry Seal" positioning dynamically */
     .text-container {
-        top: 20%;
+        right: 0;
+        left: auto;
+        width: 100%;
+        text-align: right;
+        padding-right: 5%;
     }
     
-    /* Stack albums vertically */
+    /* Ensure black border around albums */
+    .top-3-container {
+        padding: 30px;
+    }
+    
     .albums {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
     
     .album {
-        width: 80%;
-        margin-bottom: 30px;
-        /* Use a background image on mobile */
-        aspect-ratio: 1 / 1;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    /* Hide the <img> so the background image shows */
-    .album img {
-        display: none;
-    }
-    
-    /* 30% opaque black overlay */
-    .album::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 15px;
-        z-index: 0;
-    }
-    
-    .album-text {
-        position: relative;
-        z-index: 1;
+        width: 90%;
         padding: 20px;
-        color: #fff;
-        text-align: center; /* Also center text on mobile */
     }
     
-    /* Set background images for each album */
-    .album-1 {
-        background-image: url('EWLSF.png');
-    }
-    .album-2 {
-        background-image: url('EWLSF.png');
-    }
-    .album-3 {
-        background-image: url('OnAndOn.png');
+    /* Center the text at the bottom */
+    .streaming-links {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
