@@ -21,13 +21,13 @@ html, body {
     background-position: right center; /* Prioritize the right side */
 }
 
-/* Position header text higher and align dynamically */
+/* Position header text higher */
 .text-container {
     position: absolute;
     top: 25%; /* Desktop: adjust as needed */
-    right: 5%; /* Push text towards the right without being cut off */
-    text-align: right; /* Align text to the right */
-    width: fit-content;
+    left: 20%;
+    transform: translateY(-50%);
+    text-align: center;
     opacity: 0;
 }
 
@@ -36,6 +36,8 @@ html, body {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
     margin: 0;
+    position: relative;
+    left: 0;
     animation: slideIn 2s forwards;
 }
 
@@ -44,6 +46,8 @@ html, body {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
+    position: relative;
+    left: 20px;
     animation: slideInSeal 3s forwards; /* Ends after HENRY's animation */
 }
 
@@ -52,7 +56,7 @@ html, body {
 ---------------------------- */
 .top-3-container {
     background-color: #333;
-    padding: 30px; /* Ensure uniform padding for black border */
+    padding: 30px 0 60px;
     text-align: center;
 }
 
@@ -71,18 +75,19 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px; /* Ensure equal spacing on all sides */
 }
 
-/* Ensure a black border effect on all sides */
+/* Desktop Album Styles */
 .album {
-    background-color: black;
+    background-color: #000;  /* Black box on desktop */
     color: white;
-    width: 220px; /* Slightly increase width */
+    width: 200px;
     padding: 20px;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    
+    /* Hover lift animation */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -91,11 +96,13 @@ html, body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Hide the default border radius on the inner img for a cleaner look (optional) */
 .album img {
     width: 100%;
     border-radius: 10px;
 }
 
+/* Center the text in each album, remove left padding */
 .album-text {
     text-align: center;
     padding: 20px;
@@ -112,78 +119,223 @@ html, body {
 }
 
 /* ----------------------------
+   Header Animations
+---------------------------- */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInSeal {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ----------------------------
    Streaming Platform Links
 ---------------------------- */
 
-/* Center text at the bottom */
-.streaming-links {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Apple Music */
-.apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
+/* Apple Music (Pink) */
+.apple-music {
     background-color: black;
     width: 100%;
     padding: 20px;
     text-align: center;
 }
-
-.apple-music h2, .spotify h2, .amazon-music h2, .pandora h2, .soundcloud h2, .youtube-music h2 {
+.apple-music a {
+    text-decoration: none;
+}
+.apple-music h2 {
     font-size: 3rem;
     margin: 0;
+    color: #FF2D55;
     transition: all 0.3s ease-in-out;
 }
-
-.apple-music h2 { color: #FF2D55; }
-.spotify h2 { color: #1DB954; }
-.amazon-music h2 { color: #FF9900; }
-.pandora h2 { color: #0063B1; }
-.soundcloud h2 { color: #FF5500; }
-.youtube-music h2 { color: #FF0000; }
-
-.apple-music:hover h2, .spotify:hover h2, .amazon-music:hover h2, 
-.pandora:hover h2, .soundcloud:hover h2, .youtube-music:hover h2 {
+.apple-music:hover h2 {
     color: black;
 }
+.apple-music:hover {
+    background-color: #FF2D55;
+}
 
-.apple-music:hover { background-color: #FF2D55; }
-.spotify:hover { background-color: #1DB954; }
-.amazon-music:hover { background-color: #FF9900; }
-.pandora:hover { background-color: #0063B1; }
-.soundcloud:hover { background-color: #FF5500; }
-.youtube-music:hover { background-color: #FF0000; }
+/* Spotify (Green) */
+.spotify {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.spotify a {
+    text-decoration: none;
+}
+.spotify h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #1DB954;
+    transition: all 0.3s ease-in-out;
+}
+.spotify:hover h2 {
+    color: black;
+}
+.spotify:hover {
+    background-color: #1DB954;
+}
+
+/* Amazon Music (Yellow) */
+.amazon-music {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.amazon-music a {
+    text-decoration: none;
+}
+.amazon-music h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF9900;
+    transition: all 0.3s ease-in-out;
+}
+.amazon-music:hover h2 {
+    color: black;
+}
+.amazon-music:hover {
+    background-color: #FF9900;
+}
+
+/* Pandora (Blue) */
+.pandora {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.pandora a {
+    text-decoration: none;
+}
+.pandora h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #0063B1;
+    transition: all 0.3s ease-in-out;
+}
+.pandora:hover h2 {
+    color: black;
+}
+.pandora:hover {
+    background-color: #0063B1;
+}
+
+/* SoundCloud (Orange) */
+.soundcloud {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.soundcloud a {
+    text-decoration: none;
+}
+.soundcloud h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF5500;
+    transition: all 0.3s ease-in-out;
+}
+.soundcloud:hover h2 {
+    color: black;
+}
+.soundcloud:hover {
+    background-color: #FF5500;
+}
+
+/* YouTube Music (Red) */
+.youtube-music {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.youtube-music a {
+    text-decoration: none;
+}
+.youtube-music h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FF0000;
+    transition: all 0.3s ease-in-out;
+}
+.youtube-music:hover h2 {
+    color: black;
+}
+.youtube-music:hover {
+    background-color: #FF0000;
+}
 
 /* ----------------------------
    Mobile Styles
 ---------------------------- */
 @media (max-width: 768px) {
+    /* Raise header text further up */
     .text-container {
         top: 20%;
-        right: 3%; /* Adjust right margin for smaller screens */
-        font-size: 4rem; /* Scale down text size */
     }
-
-    .top-3-container {
-        padding: 20px; /* Ensure equal padding */
-    }
-
+    
+    /* Stack albums vertically */
     .albums {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .album {
-        width: 90%; /* Ensure albums scale properly */
-        padding: 15px;
+        width: 80%;
+        margin-bottom: 30px;
+        /* Use a background image on mobile */
+        aspect-ratio: 1 / 1;
+        background-size: cover;
+        background-position: center;
     }
-
-    .streaming-links {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    
+    /* Hide the <img> so the background image shows */
+    .album img {
+        display: none;
+    }
+    
+    /* 30% opaque black overlay */
+    .album::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        z-index: 0;
+    }
+    
+    .album-text {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        color: #fff;
+        text-align: center; /* Also center text on mobile */
+    }
+    
+    /* Set background images for each album */
+    .album-1 {
+        background-image: url('EWLSF.png');
+    }
+    .album-2 {
+        background-image: url('EWLSF.png');
+    }
+    .album-3 {
+        background-image: url('OnAndOn.png');
     }
 }
