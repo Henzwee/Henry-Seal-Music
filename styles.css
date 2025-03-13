@@ -24,19 +24,6 @@ html, body {
     background-repeat: no-repeat;
 }
 
-.header {
-    position: fixed; /* Fixes the header in place */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Forces it to remain full height */
-    background-image: url('music_header.png');
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
-    z-index: -1; /* Keeps it behind content */
-}
-
 /* Position header text higher */
 .text-container {
     position: absolute;
