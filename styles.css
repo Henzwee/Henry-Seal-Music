@@ -15,11 +15,11 @@ html, body {
 
 .header {
     position: relative;
-    min-height: 100vh;
-    height: 100dvh; /* Ensures dynamic viewport height */
+    min-height: 100vh;  /* Fallback for older browsers */
+    height: 100lvh;      /* Large viewport height prevents shrinking */
     background-image: url('music_header.png');
     background-size: cover;
-    background-position: right center; /* Prioritize the right side */
+    background-position: right center;
     background-repeat: no-repeat;
 }
 
