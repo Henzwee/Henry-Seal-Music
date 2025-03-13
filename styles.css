@@ -146,46 +146,90 @@ html, body {
    Streaming Platform Links
 ---------------------------- */
 
+/* Center the entire block */
+.streaming-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    padding: 40px 0;
+}
+
+/* Styling each platform block */
+.apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
+    background-color: black;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Restore link styling */
+.apple-music a, .spotify a, .amazon-music a, .pandora a, .soundcloud a, .youtube-music a {
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure full clickable area */
+}
+
+/* Ensure h2 inside the links is styled properly */
+.apple-music a h2, .spotify a h2, .amazon-music a h2, 
+.pandora a h2, .soundcloud a h2, .youtube-music a h2 {
+    font-size: 3rem;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Individual platform colors */
+.apple-music a h2 { color: #FF2D55; }
+.spotify a h2 { color: #1DB954; }
+.amazon-music a h2 { color: #FF9900; }
+.pandora a h2 { color: #0063B1; }
+.soundcloud a h2 { color: #FF5500; }
+.youtube-music a h2 { color: #FF0000; }
+
 /* Hover Effect: Swap colors */
 .apple-music:hover {
-    background-color: #FF2D55 !important; /* Apple Music background */
+    background-color: #FF2D55 !important;
 }
-.apple-music:hover h2 {
-    color: black !important; /* Text turns black */
+.apple-music:hover a h2 {
+    color: black !important;
 }
 
 .spotify:hover {
-    background-color: #1DB954 !important; /* Spotify background */
+    background-color: #1DB954 !important;
 }
-.spotify:hover h2 {
+.spotify:hover a h2 {
     color: black !important;
 }
 
 .amazon-music:hover {
-    background-color: #FF9900 !important; /* Amazon Music background */
+    background-color: #FF9900 !important;
 }
-.amazon-music:hover h2 {
+.amazon-music:hover a h2 {
     color: black !important;
 }
 
 .pandora:hover {
-    background-color: #0063B1 !important; /* Pandora background */
+    background-color: #0063B1 !important;
 }
-.pandora:hover h2 {
+.pandora:hover a h2 {
     color: black !important;
 }
 
 .soundcloud:hover {
-    background-color: #FF5500 !important; /* SoundCloud background */
+    background-color: #FF5500 !important;
 }
-.soundcloud:hover h2 {
+.soundcloud:hover a h2 {
     color: black !important;
 }
 
 .youtube-music:hover {
-    background-color: #FF0000 !important; /* YouTube Music background */
+    background-color: #FF0000 !important;
 }
-.youtube-music:hover h2 {
+.youtube-music:hover a h2 {
     color: black !important;
 }
 
