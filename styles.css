@@ -143,40 +143,45 @@ html, body {
    Streaming Platform Links
 ---------------------------- */
 
-.social-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* Generic Styles for All Music Services */
+.apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
+    background-color: black;
     width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex; /* Ensures flexbox alignment */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
 }
 
-/* Style for each platform */
-.social-links div {
-    width: 50%; /* Adjust width for centering */
-    padding: 10px;
-}
-
-.social-links a {
+.apple-music a, .spotify a, .amazon-music a, .pandora a, .soundcloud a, .youtube-music a {
+    display: flex; /* Make links flex containers */
+    justify-content: center; /* Center text inside */
+    align-items: center; /* Align text vertically */
     text-decoration: none;
+    width: 100%; /* Ensures the link takes up the full block */
+    height: 100%;
 }
 
-.social-links h2 {
-    font-size: 3rem;
-    margin: 0;
-    transition: all 0.3s ease-in-out;
+/* Individual Styles */
+.apple-music h2 { color: #FF2D55; }
+.spotify h2 { color: #1DB954; }
+.amazon-music h2 { color: #FF9900; }
+.pandora h2 { color: #0063B1; }
+.soundcloud h2 { color: #FF5500; }
+.youtube-music h2 { color: #FF0000; }
+
+.apple-music:hover, .spotify:hover, .amazon-music:hover, .pandora:hover, .soundcloud:hover, .youtube-music:hover {
+    background-color: currentColor;
 }
 
-.apple-music { background-color: black; color: #FF2D55; }
-.spotify { background-color: black; color: #1DB954; }
-.amazon-music { background-color: black; color: #FF9900; }
-.pandora { background-color: black; color: #0063B1; }
-.soundcloud { background-color: black; color: #FF5500; }
-.youtube-music { background-color: black; color: #FF0000; }
-
-.social-links div:hover {
-    background-color: white;
+.apple-music:hover h2,
+.spotify:hover h2,
+.amazon-music:hover h2,
+.pandora:hover h2,
+.soundcloud:hover h2,
+.youtube-music:hover h2 {
+    color: black;
 }
 
 /* ----------------------------
