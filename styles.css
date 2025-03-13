@@ -311,7 +311,7 @@ html, body {
         position: relative;
     }
     
-    /* Center text on image and show on scroll */
+    /* Center text on image and make it visible on scroll */
     .album-text {
         position: absolute;
         top: 50%;
@@ -324,5 +324,6 @@ html, body {
         text-align: center;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
+        pointer-events: none; /* Prevent accidental interaction */
     }
 }
