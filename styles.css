@@ -146,10 +146,6 @@ html, body {
    Streaming Platform Links
 ---------------------------- */
 
-/* ----------------------------
-   Streaming Platform Links
----------------------------- */
-
 /* Centering the entire block */
 .streaming-links {
     display: flex;
@@ -195,7 +191,7 @@ html, body {
 
 /* Hover Effect: Swap colors */
 .apple-music:hover, .spotify:hover, .amazon-music:hover, .pandora:hover, .soundcloud:hover, .youtube-music:hover {
-    background-color: currentColor; /* Changes background to text color */
+    background-color: currentColor !important; /* Changes background to text color */
 }
 
 .apple-music:hover h2,
@@ -204,7 +200,7 @@ html, body {
 .pandora:hover h2,
 .soundcloud:hover h2,
 .youtube-music:hover h2 {
-    color: black; /* Text turns black on hover */
+    color: black !important; /* Text turns black on hover */
 }
 
 /* ----------------------------
