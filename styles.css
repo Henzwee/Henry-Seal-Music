@@ -237,22 +237,21 @@ html, body {
    Mobile Styles
 ---------------------------- */
 
-/* Shorten buttons on mobile */
+/* Adjust button font size on mobile */
 @media (max-width: 768px) {
-    .apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
-        max-width: 80%; /* Reduce width so it looks more like a button */
-        padding: 15px; /* Slightly smaller padding */
+    .apple-music a h2, .spotify a h2, .amazon-music a h2, 
+    .pandora a h2, .soundcloud a h2, .youtube-music a h2 {
+        font-size: 2rem; /* Reduce font size so it fits */
     }
 }
 
 /* Extra small screens (phones <480px) */
 @media (max-width: 480px) {
-    .apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
-        max-width: 70%; /* Make it even smaller for very small screens */
-        padding: 12px; /* Adjust padding for proportion */
+    .apple-music a h2, .spotify a h2, .amazon-music a h2, 
+    .pandora a h2, .soundcloud a h2, .youtube-music a h2 {
+        font-size: 1.8rem; /* Slightly smaller for very small screens */
     }
 }
-
 
 @media (min-width: 769px) {
     /* Adjust album text visibility logic for desktop */
