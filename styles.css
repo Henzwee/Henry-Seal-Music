@@ -30,9 +30,6 @@ html, body {
     text-align: center;
     font-size: 1.2rem;
     color: white; /* Ensure text is visible */
-    background-color: #333; /* Match the dark grey background */
-    padding: 20px;
-    border-radius: 10px; /* Optional: Softens edges */
     line-height: 1.5;
 }
 
