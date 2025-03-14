@@ -15,10 +15,9 @@ html, body {
 
 .header {
     position: relative;
-    min-height: 100vh;
-    height: 100vh; /* Prevents resizing */
-    max-height: 100vh; /* Ensures consistency */
-    overflow: hidden; /* Stops unexpected shifts */
+    height: var(--vh); /* Use the locked viewport height */
+    max-height: var(--vh); /* Ensures it doesn't stretch */
+    overflow: hidden;
     background-image: url('music_header.png');
     background-size: cover;
     background-position: right center; /* Adjust if needed */
