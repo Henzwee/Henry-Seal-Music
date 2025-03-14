@@ -29,10 +29,11 @@ html, body {
     margin: 50px auto 30px;
     text-align: center;
     font-size: 1.2rem;
-    color: white;
+    color: white; /* Ensure text is visible */
+    background-color: #333; /* Match the dark grey background */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Softens edges */
     line-height: 1.5;
-    padding: 0 20px;
-    background-color: #333;
 }
 
 /* Position header text higher */
