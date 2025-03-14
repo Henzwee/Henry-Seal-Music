@@ -15,13 +15,11 @@ html, body {
 
 .header {
     position: relative;
-    height: var(--vh); /* Use the locked viewport height */
-    max-height: var(--vh); /* Ensures it doesn't stretch */
-    overflow: hidden;
     background-image: url('music_header.png');
     background-size: cover;
-    background-position: right center; /* Adjust if needed */
+    background-position: right center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .bio {
@@ -246,42 +244,12 @@ html, body {
    Mobile Styles
 ---------------------------- */
 
-/* Adjust button width and font size on mobile */
 @media (max-width: 768px) {
-    .apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
-        max-width: 90%; /* Match the width of the "Top 3" boxes */
-        padding: 14px 0; /* Slightly larger buttons */
+    /* Set a fixed height for the header on mobile */
+    .header {
+        height: 400px; /* Adjust this if needed */
     }
 
-    /* Increase font size while ensuring text fits in one line */
-    .apple-music a h2, .spotify a h2, .amazon-music a h2, 
-    .pandora a h2, .soundcloud a h2, .youtube-music a h2 {
-        font-size: 2.2rem; /* Adjusted for best fit */
-    }
-}
-
-/* Extra small screens (phones <480px) */
-@media (max-width: 480px) {
-    .apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
-        max-width: 95%; /* Make sure it looks good on very small screens */
-        padding: 12px 0; /* Adjust height to maintain proportions */
-    }
-
-    .apple-music a h2, .spotify a h2, .amazon-music a h2, 
-    .pandora a h2, .soundcloud a h2, .youtube-music a h2 {
-        font-size: 2rem; /* Reduce just slightly for better fit */
-    }
-}
-
-@media (min-width: 769px) {
-    /* Adjust album text visibility logic for desktop */
-    .album-text {
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    }
-}
-
-@media (max-width: 768px) {
     /* Adjust "Henry Seal" positioning dynamically */
     .text-container {
         right: 0;
@@ -322,5 +290,30 @@ html, body {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
         pointer-events: none; /* Prevent accidental interaction */
+    }
+
+    /* Adjust button width and font size on mobile */
+    .apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
+        max-width: 90%; /* Match the width of the "Top 3" boxes */
+        padding: 14px 0; /* Slightly larger buttons */
+    }
+
+    /* Increase font size while ensuring text fits in one line */
+    .apple-music a h2, .spotify a h2, .amazon-music a h2, 
+    .pandora a h2, .soundcloud a h2, .youtube-music a h2 {
+        font-size: 2.2rem; /* Adjusted for best fit */
+    }
+}
+
+/* Extra small screens (phones <480px) */
+@media (max-width: 480px) {
+    .apple-music, .spotify, .amazon-music, .pandora, .soundcloud, .youtube-music {
+        max-width: 95%; /* Make sure it looks good on very small screens */
+        padding: 12px 0; /* Adjust height to maintain proportions */
+    }
+
+    .apple-music a h2, .spotify a h2, .amazon-music a h2, 
+    .pandora a h2, .soundcloud a h2, .youtube-music a h2 {
+        font-size: 2rem; /* Reduce just slightly for better fit */
     }
 }
