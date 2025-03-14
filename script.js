@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Delayed animation for header text
     setTimeout(() => {
-        headerText.style.opacity = '1';
-        headerText.style.animation = 'slideIn 2s forwards';
-    }, 500);  // Adjust timing as needed
+        if (headerText) {
+            headerText.style.opacity = '1';
+            headerText.style.animation = 'slideIn 2s forwards';
+        }
+    }, 500);
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
@@ -29,10 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Lock viewport height to prevent resizing on scroll
     function setFixedVH() {
-        const vh = window.innerHeight; // Capture viewport height at load
+        const vh = window.innerHeight;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
-        document.querySelector('.header').style.height = `${vh}px`;
-        document.querySelector('.header').style.maxHeight = `${vh}px`;
+        const header = document.querySelector('.header');
+        if (header) {
+            header.style.height = `${vh}px`;
+            header.style.maxHeight = `${vh}px`;
+        }
     }
 
     // Run once on load, and update on orientation change only
@@ -45,9 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Smooth scroll to streaming links when clicking an album
-    albumBoxes.forEach(album => {
-        album.addEventListener('click', function() {
-            streamingSection.scrollIntoView({ behavior: 'smooth' });
+    if (streamingSection) {
+        albumBoxes.forEach(album => {
+            album.addEventListener('click', function() {
+                console.log('Album clicked:', album); // Debugging log
+                streamingSection.scrollIntoView({ behavior: 'smooth' });
+            });
         });
-    });
+    } else {
+        console.error('Error: Streaming section not found!');
+    }
 });
