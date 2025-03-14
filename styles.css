@@ -99,9 +99,8 @@ html, body {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    
-    /* Hover lift animation */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover lift animation */
 }
 
 .album:hover {
