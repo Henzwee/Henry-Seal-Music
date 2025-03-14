@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headerText = document.querySelector('.text-container');
-    const name = document.querySelector('.name');
-    const seal = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
 
     // Delayed animation for header text
@@ -27,11 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Run once to set initial state
 
-    // Set viewport height dynamically to prevent resizing issues
-    function setVH() {
-        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    // Lock viewport height to prevent resizing on scroll
+    function setFixedVH() {
+        const vh = window.innerHeight; // Capture viewport height at load
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        document.querySelector('.header').style.height = `${vh}px`;
+        document.querySelector('.header').style.maxHeight = `${vh}px`;
     }
 
-    window.addEventListener('resize', setVH);
-    setVH(); // Run once on load
+    // Run once on load, and update on orientation change only
+    setFixedVH();
+    window.addEventListener('resize', () => {
+        if (window.matchMedia("(orientation: portrait)").matches || 
+            window.matchMedia("(orientation: landscape)").matches) {
+            setFixedVH();
+        }
+    });
 });
