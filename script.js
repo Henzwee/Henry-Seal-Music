@@ -26,4 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Run once to set initial state
+
+    // Set viewport height dynamically to prevent resizing issues
+    function setVH() {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    }
+
+    window.addEventListener('resize', setVH);
+    setVH(); // Run once on load
 });
