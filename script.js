@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headerText = document.querySelector('.text-container');
     const albumTexts = document.querySelectorAll('.album-text');
+    const albumBoxes = document.querySelectorAll('.album'); // Selects all album boxes
+    const streamingSection = document.getElementById('streaming-links'); // Targets the streaming links section
 
     // Delayed animation for header text
     setTimeout(() => {
@@ -40,5 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
             window.matchMedia("(orientation: landscape)").matches) {
             setFixedVH();
         }
+    });
+
+    // Smooth scroll to streaming links when clicking an album
+    albumBoxes.forEach(album => {
+        album.addEventListener('click', function() {
+            streamingSection.scrollIntoView({ behavior: 'smooth' });
+        });
     });
 });
