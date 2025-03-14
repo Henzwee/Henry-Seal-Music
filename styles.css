@@ -26,15 +26,12 @@ html, body {
 
 .bio {
     max-width: 800px;
-    margin: 50px auto 30px;
+    margin: 40px auto 30px; /* Adjust spacing */
     text-align: center;
     font-size: 1.2rem;
-    color: white !important; /* Ensure text is visible */
-    background: none !important; /* Remove any inherited background */
-    background-color: transparent !important; /* Force transparency */
-    padding: 20px;
+    color: white; /* Ensure visibility */
     line-height: 1.5;
-    display: block; /* Make sure it’s treated as a block element */
+    padding: 0 20px; /* Prevents text from touching edges on mobile */
 }
 
 /* Position header text higher */
