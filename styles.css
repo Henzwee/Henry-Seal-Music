@@ -29,10 +29,12 @@ html, body {
     margin: 50px auto 30px;
     text-align: center;
     font-size: 1.2rem;
-    color: white; /* Ensures text is visible */
-    background: transparent !important; /* Forces background to be transparent */
+    color: white !important; /* Ensure text is visible */
+    background: none !important; /* Remove any inherited background */
+    background-color: transparent !important; /* Force transparency */
     padding: 20px;
     line-height: 1.5;
+    display: block; /* Make sure it’s treated as a block element */
 }
 
 /* Position header text higher */
