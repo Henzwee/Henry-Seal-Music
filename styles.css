@@ -13,15 +13,18 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+:root {
+    --vh: 1vh;
+}
+
 .header {
     position: relative;
-    min-height: 100vh; /* Ensures full height at load */
-    height: 100vh; /* Fixes height to prevent resizing */
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 100);
     background-image: url('music_header.png');
     background-size: cover;
-    background-position: right center;
+    background-position: right center; /* Adjust this below */
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional: Makes background stay fixed while scrolling */
 }
 
 /* Position header text higher */
