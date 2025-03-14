@@ -29,7 +29,9 @@ html, body {
     margin: 50px auto 30px;
     text-align: center;
     font-size: 1.2rem;
-    color: white; /* Ensure text is visible */
+    color: white; /* Ensures text is visible */
+    background: transparent !important; /* Forces background to be transparent */
+    padding: 20px;
     line-height: 1.5;
 }
 
