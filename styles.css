@@ -49,22 +49,31 @@ html, body {
         color: rgba(0, 0, 0, 0.7) !important; /* Force transparency */
         margin: 0 !important;
         position: relative !important;
-        left: 0 !important;
         display: block !important;
         line-height: 1 !important;
+        opacity: 0; /* Ensure they start invisible */
+    }
+
+    .name {
+        left: 0;
+        animation: slideIn 1.5s ease-out forwards;
     }
 
     .seal {
         left: 20px !important;
         top: -15px !important; /* Moves SEAL up */
+        animation: slideInSeal 3s ease-out forwards;
+        animation-delay: 0.5s; /* SEAL slides in later */
     }
 }
 
+/* Fix rendering issues on Safari */
 * {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
 }
 
+/* Slide-in animations */
 @keyframes slideIn {
     0% {
         transform: translateX(-150%); /* Start completely off-screen */
@@ -85,29 +94,6 @@ html, body {
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-.name {
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
-    margin: 0;
-    position: relative;
-    left: 0;
-    opacity: 0; /* Ensure it starts invisible */
-    animation: slideIn 1.5s ease-out forwards; /* Faster slide */
-}
-
-.seal {
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
-    margin: 0;
-    position: relative;
-    left: 20px;
-    opacity: 0; /* Ensure it starts invisible */
-    animation: slideInSeal 3s ease-out forwards; /* Slower slide */
-    animation-delay: 0.5s; /* Starts later */
 }
 
 /* ----------------------------
