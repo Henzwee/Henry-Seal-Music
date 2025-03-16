@@ -262,7 +262,7 @@ html, body {
 
     /* Slightly increase bio text size on mobile */
     .bio {
-        font-size: 1.4rem; /* Slightly larger on mobile */
+        font-size: 1.35rem; /* Slightly larger on mobile */
     }
 
     /* Adjust "Henry Seal" positioning dynamically */
