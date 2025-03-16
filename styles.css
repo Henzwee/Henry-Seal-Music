@@ -45,7 +45,7 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.6) !important; /* Force darker semi-transparent black */
+    color: rgba(0, 0, 0, 0.85) !important; /* Force darker semi-transparent black */
     margin: 0;
     position: relative;
     left: 0;
@@ -56,11 +56,11 @@ html, body {
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.85);
     margin: 0;
     position: relative;
     left: 20px;
-    animation: slideInSeal 3s forwards;
+    animation: slideInSeal 3.5s ease-out forwards; /* Slower slide */
     animation-fill-mode: forwards; /* Prevents animation reset */
 }
 
