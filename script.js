@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const headerText = document.querySelector('.text-container');
     const henryText = document.querySelector('.name');
-    const sealText = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
     const albumBoxes = document.querySelectorAll('.album');
     const streamingSection = document.getElementById('streaming-links');
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headerText.style.opacity = '1';
     }
 
-    // Animate HENRY first (No JS override of CSS)
+    // Animate HENRY first (CSS handles animation)
     setTimeout(() => {
         if (henryText) {
             henryText.style.removeProperty('opacity'); // Let CSS handle opacity
