@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headerText.style.opacity = '1';
     }
 
-    // Delay animation to prevent jumpiness
+    // Animate HENRY first
     setTimeout(() => {
         if (henryText) {
             henryText.style.removeProperty('opacity'); // Let CSS handle opacity
@@ -19,12 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 200); // Small delay for a smoother load
 
+    // Animate SEAL later (same speed, just delayed)
     setTimeout(() => {
         if (sealText) {
             sealText.style.removeProperty('opacity'); // Let CSS handle opacity
-            sealText.style.animation = 'slideInSeal 3s ease-out forwards';
+            sealText.style.animation = 'slideIn 1.5s ease-out forwards'; // Same animation as HENRY
         }
-    }, 700); // Delay SEAL so it moves in separately
+    }, 800); // Delay SEAL so it moves in separately
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
