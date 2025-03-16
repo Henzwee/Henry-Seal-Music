@@ -45,7 +45,7 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.7) /* Darker semi-transparent black */
+    color: rgba(0, 0, 0, 0.5) /* Darker semi-transparent black */
     margin: 0;
     position: relative;
     left: 0;
@@ -55,11 +55,14 @@ html, body {
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.7) /* Darker semi-transparent black */
+    color: rgba(0, 0, 0, 0.5) 
     margin: 0;
     position: relative;
     left: 20px;
-    animation: slideInSeal 3s forwards; /* Ends after HENRY's animation */
+    top: -10px; /* Adjust this value to move SEAL back up */
+    animation: slideInSeal 3s forwards;
+    display: block;
+    line-height: 1; /* Ensures equal spacing */
 }
 
 /* ----------------------------
