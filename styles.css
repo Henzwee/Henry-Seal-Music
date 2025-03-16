@@ -243,18 +243,18 @@ html, body {
 /* ----------------------------
    Mobile Styles
 ---------------------------- */
-
 @media (max-width: 768px) {
-      /* Set a fixed height for the header on mobile */
-       .header {
+    /* Use a separate mobile header image */
+    .header {
+        background-image: url('music_header_mobile.png') !important; /* Cropped mobile image */
         background-size: cover !important; /* Ensure it fills the space */
-        background-position: center 60% !important; /* Adjusted to focus on guitar */
-        height: 400px !important; /* Slightly reduced height */
+        background-position: center center !important; /* Keep the focus centered */
+        height: 400px !important; /* Fixed height */
         min-height: 400px !important;
         max-height: 400px !important;
     }
 
-    /* Prevent page resizing issues */
+    /* Prevent page resizing issues when scrolling */
     html, body {
         height: 100%;
         overflow-x: hidden;
@@ -265,7 +265,7 @@ html, body {
         font-size: 1.35rem; /* Slightly larger on mobile */
     }
 
-    /* Adjust "Henry Seal" positioning dynamically */
+    /* Adjust "Henry Seal" text positioning */
     .text-container {
         right: 0;
         left: auto;
@@ -273,24 +273,24 @@ html, body {
         text-align: right;
         padding-right: 5%;
     }
-    
-    /* Ensure black border around albums */
+
+    /* Ensure proper spacing in the top 3 section */
     .top-3-container {
         padding: 30px;
     }
-    
+
     .albums {
         flex-direction: column;
         align-items: center;
         padding: 20px;
     }
-    
+
     .album {
         width: 90%;
         padding: 20px;
         position: relative;
     }
-    
+
     /* Center text on image and make it visible on scroll */
     .album-text {
         position: absolute;
