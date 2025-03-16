@@ -80,7 +80,7 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.81) !important; /* Adjusted opacity */
+    color: rgba(0, 0, 0, 0.85) !important; /* Adjusted opacity */
     margin: 0;
     position: relative;
     left: 0;
@@ -90,7 +90,7 @@ html, body {
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.81) !important; /* Adjusted opacity */
+    color: rgba(0, 0, 0, 0.85) !important; /* Adjusted opacity */
     margin: 0;
     position: relative;
     left: 20px;
