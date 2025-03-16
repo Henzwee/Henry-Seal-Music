@@ -35,7 +35,7 @@ html, body {
 /* Position header text */
 .text-container {
     position: absolute;
-    top: 28% !important; /* Lowered slightly on desktop */
+    padding-top: 50px !important; /* Moves text lower */
     left: 20%;
     transform: translateY(-50%);
     text-align: center;
