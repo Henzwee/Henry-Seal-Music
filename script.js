@@ -3,24 +3,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const henryText = document.querySelector('.name');
     const sealText = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
-    const albumBoxes = document.querySelectorAll('.album'); // Selects all album boxes
-    const streamingSection = document.getElementById('streaming-links'); // Targets the streaming links section
+    const albumBoxes = document.querySelectorAll('.album'); 
+    const streamingSection = document.getElementById('streaming-links'); 
 
-    // Ensure text-container appears
+    // Ensure text-container appears immediately
     if (headerText) {
         headerText.style.opacity = '1';
     }
 
-    // Ensure animations run properly without JS overriding them
-    if (henryText) {
-        henryText.style.animation = 'slideIn 1.5s ease-out forwards';
-    }
-    
+    // Delay animation to prevent jumpiness
+    setTimeout(() => {
+        if (henryText) {
+            henryText.style.removeProperty('opacity'); // Let CSS handle opacity
+            henryText.style.animation = 'slideIn 1.5s ease-out forwards';
+        }
+    }, 200); // Small delay for a smoother load
+
     setTimeout(() => {
         if (sealText) {
+            sealText.style.removeProperty('opacity'); // Let CSS handle opacity
             sealText.style.animation = 'slideInSeal 3s ease-out forwards';
         }
-    }, 500); // SEAL slides in slightly later
+    }, 700); // Delay SEAL so it moves in separately
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Run once to set initial state
+    handleScroll(); 
 
     // Lock viewport height to prevent resizing on scroll
     function setFixedVH() {
