@@ -246,12 +246,12 @@ html, body {
 
 @media (max-width: 768px) {
       /* Set a fixed height for the header on mobile */
-   .header {
-        background-size: cover !important; /* Ensures it fills the space */
-        background-position: left center !important; /* Focus on the left side */
-        height: 450px !important; /* Increased height for better visibility */
-        min-height: 450px !important;
-        max-height: 450px !important;
+       .header {
+        background-size: cover !important; /* Ensure it fills the space */
+        background-position: center 60% !important; /* Adjusted to focus on guitar */
+        height: 400px !important; /* Slightly reduced height */
+        min-height: 400px !important;
+        max-height: 400px !important;
     }
 
     /* Prevent page resizing issues */
