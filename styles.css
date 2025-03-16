@@ -84,7 +84,7 @@ html, body {
 ---------------------------- */
 @media (min-width: 769px) {
     .text-container {
-        top: 40% !important; /* Move text further down */
+        top: 50% !important; /* Move text further DOWN */
         left: 20%;
         transform: translateY(-50%);
         text-align: center;
