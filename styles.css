@@ -45,7 +45,7 @@ html, body {
 /* Desktop Adjustment */
 @media (min-width: 769px) {
     .text-container {
-        top: 38% !important; /* Moves text down for desktop */
+        top: 42% !important; /* Moves text down for desktop */
     }
 }
 
