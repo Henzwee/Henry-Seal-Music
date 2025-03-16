@@ -42,25 +42,22 @@ html, body {
     opacity: 0;
 }
 
-.name {
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent black */
-    margin: 0;
-    position: relative;
-    left: 0;
-    animation: slideIn 2s forwards;
-}
+@media (min-width: 769px) {
+    .name, .seal {
+        font-size: 6rem !important;
+        font-weight: bold !important;
+        color: rgba(0, 0, 0, 0.7) !important; /* Force transparency */
+        margin: 0 !important;
+        position: relative !important;
+        left: 0 !important;
+        display: block !important;
+        line-height: 1 !important;
+    }
 
-.seal {
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
-    margin: 0;
-    position: relative;
-    left: 20px;
-    top: -15px; /* Moves SEAL up slightly */
-    animation: slideInSeal 3s forwards; /* Ends after HENRY's animation */
+    .seal {
+        left: 20px !important;
+        top: -15px !important; /* Moves SEAL up */
+    }
 }
 
 /* ----------------------------
