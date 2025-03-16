@@ -1,4 +1,4 @@
-/* ----------------------------
+ /* ----------------------------
    Global & Header Styles
 ---------------------------- */
 body {
@@ -42,59 +42,24 @@ html, body {
     opacity: 0;
 }
 
-@media (min-width: 769px) {
-    .name, .seal {
-        font-size: 6rem !important;
-        font-weight: bold !important;
-        margin: 0 !important;
-        position: relative !important;
-        display: block !important;
-        line-height: 1 !important;
-        opacity: 0 !important; /* Ensure they start invisible */
-        transform: translateX(-150%) !important; /* Start off-screen */
-        animation-fill-mode: forwards !important; /* Keeps final state after animation */
-    }
-
-    .name {
-        color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent black */
-        animation: slideIn 1.5s ease-out forwards !important; /* Faster animation */
-    }
-
-    .seal {
-        top: -15px !important; /* Moves SEAL up */
-        color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent black */
-        animation: slideInSeal 3s ease-out forwards !important; /* Slower animation */
-        animation-delay: 0.5s !important; /* Delayed start */
-    }
+.name {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);  !important; /* Force darker semi-transparent black */
+    margin: 0;
+    position: relative;
+    left: 0;
+    animation: slideIn 2s forwards;
 }
 
-/* Fix rendering issues on Safari */
-* {
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-}
-
-/* Slide-in animations */
-@keyframes slideIn {
-    0% {
-        transform: translateX(-150%) !important; /* Start off-screen */
-        opacity: 0 !important;
-    }
-    100% {
-        transform: translateX(0) !important;
-        opacity: 1 !important;
-    }
-}
-
-@keyframes slideInSeal {
-    0% {
-        transform: translateX(-150%) !important; /* Start off-screen */
-        opacity: 0 !important;
-    }
-    100% {
-        transform: translateX(0) !important;
-        opacity: 1 !important;
-    }
+.seal {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0;
+    position: relative;
+    left: 20px;
+    animation: slideInSeal 3s forwards; /* Ends after HENRY's animation */
 }
 
 /* ----------------------------
