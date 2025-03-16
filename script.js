@@ -1,5 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const headerText = document.querySelector('.text-container');
+    const henryText = document.querySelector('.name');
+    const sealText = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
     const albumBoxes = document.querySelectorAll('.album'); // Selects all album boxes
     const streamingSection = document.getElementById('streaming-links'); // Targets the streaming links section
@@ -9,12 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
         headerText.style.opacity = '1';
     }
 
+    // Ensure animations run properly without JS overriding them
+    if (henryText) {
+        henryText.style.animation = 'slideIn 1.5s ease-out forwards';
+    }
+    
+    setTimeout(() => {
+        if (sealText) {
+            sealText.style.animation = 'slideInSeal 3s ease-out forwards';
+        }
+    }, 500); // SEAL slides in slightly later
+
     // Scroll-based text visibility effect for albums
     function handleScroll() {
         albumTexts.forEach(text => {
             const rect = text.parentElement.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-            
+
             if (rect.top < windowHeight * 0.9 && rect.bottom > -windowHeight * 0.4) {
                 text.style.opacity = '1';
             } else {
@@ -49,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll to streaming links when clicking an album
     if (streamingSection) {
         albumBoxes.forEach(album => {
-            album.addEventListener('click', function() {
+            album.addEventListener('click', function () {
                 console.log('Album clicked:', album); // Debugging log
                 streamingSection.scrollIntoView({ behavior: 'smooth' });
             });
