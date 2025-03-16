@@ -298,8 +298,7 @@ html, body {
     }
 
     .seal {
-        left: 50% !important; 
-        transform: translateX(-50%) !important; /* Center it */
+        left: 2px !important; /* Moves SEAL further left */
     }
    
     /* Ensure bio text is properly positioned */
