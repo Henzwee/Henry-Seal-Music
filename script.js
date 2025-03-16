@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const henryText = document.querySelector('.name');
     const sealText = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
-    const albumBoxes = document.querySelectorAll('.album'); 
-    const streamingSection = document.getElementById('streaming-links'); 
+    const albumBoxes = document.querySelectorAll('.album');
+    const streamingSection = document.getElementById('streaming-links');
 
     // Ensure text-container appears immediately
     if (headerText) {
@@ -19,12 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 200); // Small delay for a smoother load
 
-    // Animate SEAL later (Fixing the restart issue)
+    // Animate SEAL later, ensuring no reset occurs
     setTimeout(() => {
         if (sealText) {
-            sealText.style.animation = 'none'; // Reset any existing animation
-            void sealText.offsetWidth; // Force a reflow to ensure animation restarts cleanly
-            sealText.style.animation = 'slideIn 1.5s ease-out forwards'; // Reapply the animation
+            if (!sealText.classList.contains('animated')) { 
+                sealText.classList.add('animated'); // Prevent reanimation
+                sealText.style.animation = 'slideIn 1.5s ease-out forwards'; 
+            }
         }
     }, 800); // Delay SEAL so it moves in separately
 
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
+    handleScroll();
 
     // Lock viewport height to prevent resizing on scroll
     function setFixedVH() {
