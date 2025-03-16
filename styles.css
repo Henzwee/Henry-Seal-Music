@@ -33,13 +33,20 @@ html, body {
 }
 
 /* Position header text */
-/* Position header text */
 .text-container {
     position: absolute;
-    padding-top: 120px !important; /* Moves text further down */
+    top: 28% !important; /* Restore mobile position */
     left: 20%;
+    transform: translateY(-50%);
     text-align: center;
     opacity: 0;
+}
+
+/* Desktop Adjustment */
+@media (min-width: 769px) {
+    .text-container {
+        top: 38% !important; /* Moves text down for desktop */
+    }
 }
 
 /* ----------------------------
