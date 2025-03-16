@@ -35,7 +35,7 @@ html, body {
 /* Position header text */
 .text-container {
     position: absolute;
-    top: 28%; /* Lowered slightly on desktop */
+    top: 28% !important; /* Lowered slightly on desktop */
     left: 20%;
     transform: translateY(-50%);
     text-align: center;
@@ -68,12 +68,12 @@ html, body {
 }
 
 /* ----------------------------
-   Header Text
+   Header Text (Desktop)
 ---------------------------- */
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.78); /* Adjusted opacity */
+    color: rgba(0, 0, 0, 0.78) !important; /* Adjusted opacity */
     margin: 0;
     position: relative;
     left: 0;
@@ -83,20 +83,12 @@ html, body {
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.78); /* Adjusted opacity */
+    color: rgba(0, 0, 0, 0.78) !important; /* Adjusted opacity */
     margin: 0;
     position: relative;
     left: 20px;
     animation: slideInSeal 3s ease-out forwards;
 }
-
-/* Mobile-specific styling */
-@media (max-width: 768px) {
-    .text-container {
-        top: 25%; /* Keep the original position on mobile */
-    }
-}
-
 
 /* ----------------------------
    Top 3 Section
@@ -294,6 +286,14 @@ html, body {
         justify-content: center;
     }
 
+    .text-container {
+        top: 25% !important; /* Keep the original position on mobile */
+    }
+
+    .seal {
+        left: 10px !important; /* Move SEAL slightly left on mobile */
+    }
+   
     /* Ensure bio text is properly positioned */
     .bio {
         font-size: 1.38rem; /* Slightly larger on mobile */
