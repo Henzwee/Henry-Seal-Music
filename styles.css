@@ -45,7 +45,7 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
     margin: 0;
     position: relative;
     left: 0;
@@ -55,7 +55,7 @@ html, body {
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.85);
     margin: 0;
     position: relative;
     left: 20px;
@@ -245,9 +245,18 @@ html, body {
 ---------------------------- */
 
 @media (max-width: 768px) {
-    /* Set a fixed height for the header on mobile */
+      /* Set a fixed height for the header on mobile */
     .header {
-        height: 400px; /* Adjust this if needed */
+        background-size: auto 100%; /* Scale only horizontally */
+        background-position: center top;
+        height: 350px; /* Adjusted fixed height */
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+    /* Slightly increase bio text size on mobile */
+    .bio {
+        font-size: 1.3rem; /* Slightly larger on mobile */
     }
 
     /* Adjust "Henry Seal" positioning dynamically */
