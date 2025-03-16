@@ -1,16 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headerText = document.querySelector('.text-container');
+    const henryText = document.querySelector('.name');
+    const sealText = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
     const albumBoxes = document.querySelectorAll('.album'); // Selects all album boxes
     const streamingSection = document.getElementById('streaming-links'); // Targets the streaming links section
 
-    // Delayed animation for header text
+    // Ensure text-container appears
+    if (headerText) {
+        headerText.style.opacity = '1';
+    }
+
+    // Animate HENRY first
     setTimeout(() => {
-        if (headerText) {
-            headerText.style.opacity = '1';
-            headerText.style.animation = 'slideIn 2s forwards';
+        if (henryText) {
+            henryText.style.animation = 'slideIn 2s forwards';
         }
-    }, 500);
+    }, 500); // HENRY slides in first
+
+    // Animate SEAL with delay
+    setTimeout(() => {
+        if (sealText) {
+            sealText.style.animation = 'slideInSeal 2s forwards';
+        }
+    }, 1500); // SEAL slides in 1 second after HENRY
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
