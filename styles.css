@@ -45,21 +45,23 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.85);  !important; /* Force darker semi-transparent black */
+    color: rgba(0, 0, 0, 0.6) !important; /* Force darker semi-transparent black */
     margin: 0;
     position: relative;
     left: 0;
     animation: slideIn 2s forwards;
+    animation-fill-mode: forwards; /* Prevents animation reset */
 }
 
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(0, 0, 0, 0.6);
     margin: 0;
     position: relative;
     left: 20px;
-    animation: slideInSeal 3s forwards; /* Ends after HENRY's animation */
+    animation: slideInSeal 3s forwards;
+    animation-fill-mode: forwards; /* Prevents animation reset */
 }
 
 /* ----------------------------
