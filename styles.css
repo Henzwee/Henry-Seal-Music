@@ -43,19 +43,19 @@ html, body {
 }
 
 .name, .seal {
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.5) !important; /* Make text more transparent */
-    margin: 0;
-    position: relative;
-    left: 0;
-    display: block;
-    line-height: 1; /* Ensures even spacing */
+    font-size: 6rem !important;
+    font-weight: bold !important;
+    color: rgba(0, 0, 0, 0.5) !important; /* Ensure transparency is applied */
+    margin: 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    display: block !important;
+    line-height: 1 !important; /* Prevents weird spacing */
 }
 
 .seal {
-    left: 20px;
-    top: -20px; /* Moves "SEAL" higher */
+    left: 20px !important;
+    top: -30px !important; /* Moves "SEAL" higher */
 }
 
 /* ----------------------------
