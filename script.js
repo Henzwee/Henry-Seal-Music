@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const headerText = document.querySelector('.text-container');
     const henryText = document.querySelector('.name');
+    const sealText = document.querySelector('.seal');
     const albumTexts = document.querySelectorAll('.album-text');
     const albumBoxes = document.querySelectorAll('.album');
     const streamingSection = document.getElementById('streaming-links');
@@ -10,12 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
         headerText.style.opacity = '1';
     }
 
-    // Animate HENRY first (CSS handles animation)
-    setTimeout(() => {
-        if (henryText) {
-            henryText.style.removeProperty('opacity'); // Let CSS handle opacity
-        }
-    }, 200); // Small delay for a smoother load
+    // Ensure Henry and Seal start with correct opacity
+    if (henryText) {
+        henryText.style.opacity = '0.5'; // Set initial opacity to 0.5
+    }
+
+    if (sealText) {
+        sealText.style.opacity = '0.5'; // Set initial opacity to 0.5
+    }
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
