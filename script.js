@@ -11,19 +11,29 @@ document.addEventListener('DOMContentLoaded', function() {
         headerText.style.opacity = '1';
     }
 
-    // Animate HENRY first
+    // Ensure both texts start invisible and off-screen
+    if (henryText) {
+        henryText.style.opacity = '0';
+        henryText.style.transform = 'translateX(-150%)';
+    }
+    if (sealText) {
+        sealText.style.opacity = '0';
+        sealText.style.transform = 'translateX(-150%)';
+    }
+
+    // Animate HENRY first (faster)
     setTimeout(() => {
         if (henryText) {
-            henryText.style.animation = 'slideIn 2s forwards';
+            henryText.style.animation = 'slideIn 1.5s ease-out forwards';
         }
     }, 500); // HENRY slides in first
 
-    // Animate SEAL with delay
+    // Animate SEAL later (slower)
     setTimeout(() => {
         if (sealText) {
-            sealText.style.animation = 'slideInSeal 2s forwards';
+            sealText.style.animation = 'slideInSeal 3s ease-out forwards';
         }
-    }, 1500); // SEAL slides in 1 second after HENRY
+    }, 1200); // SEAL slides in more slowly
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
