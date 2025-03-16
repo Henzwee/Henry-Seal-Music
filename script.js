@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 200); // Small delay for a smoother load
 
-    // Animate SEAL later (same speed, just delayed)
+    // Animate SEAL later (Fixing the restart issue)
     setTimeout(() => {
         if (sealText) {
-            sealText.style.removeProperty('opacity'); // Let CSS handle opacity
-            sealText.style.animation = 'slideIn 1.5s ease-out forwards'; // Same animation as HENRY
+            sealText.style.animation = 'none'; // Reset any existing animation
+            void sealText.offsetWidth; // Force a reflow to ensure animation restarts cleanly
+            sealText.style.animation = 'slideIn 1.5s ease-out forwards'; // Reapply the animation
         }
     }, 800); // Delay SEAL so it moves in separately
 
