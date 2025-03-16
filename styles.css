@@ -45,7 +45,7 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    color: rgba(200, 200, 200, 0.85); /* Slightly darker semi-transparent grey */
     margin: 0;
     position: relative;
     left: 0;
@@ -240,15 +240,19 @@ html, body {
     color: black !important;
 }
 
+/* ----------------------
+   Mobile Stylings
+----------------------- */
+
 @media (max-width: 768px) {
     /* Use a separate mobile header image */
     .header {
         background-image: url('music_header_mobile.png') !important; /* Cropped mobile image */
         background-size: cover !important; /* Ensure it fills the space */
         background-position: center center !important; /* Keep the focus centered */
-        height: 500px !important; /* Increased height */
-        min-height: 500px !important;
-        max-height: 500px !important;
+        height: 550px !important; /* Increased height */
+        min-height: 550px !important;
+        max-height: 550px !important;
         display: flex; /* Ensure content inside can be positioned properly */
         align-items: center; /* Keeps text centered vertically */
         justify-content: center;
@@ -256,7 +260,7 @@ html, body {
 
     /* Ensure bio text is properly positioned */
     .bio {
-        font-size: 1.35rem; /* Slightly larger on mobile */
+        font-size: 1.38rem; /* Slightly larger on mobile */
         display: block !important; /* Ensures it's visible */
         margin-top: 20px; /* Adds spacing below the header */
         padding: 0 20px; /* Ensures it doesn’t touch the edges */
