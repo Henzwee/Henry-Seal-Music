@@ -244,15 +244,11 @@ html, body {
    Mobile Styles
 ---------------------------- */
 
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
+    /* Set a fixed height for the header on mobile */
     .header {
-        background-size: auto 100%; /* Scale only horizontally */
-        background-position: center top; /* Ensure it stays aligned */
-        height: auto; /* Allow natural height */
-        min-height: 300px; /* Set a minimum height */
-        max-height: 400px; /* Limit how tall it can be */
+        height: 400px; /* Adjust this if needed */
     }
-}
 
     /* Adjust "Henry Seal" positioning dynamically */
     .text-container {
