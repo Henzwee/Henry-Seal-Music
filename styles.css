@@ -45,23 +45,36 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.85) !important; /* Force darker semi-transparent black */
+    color: rgba(0, 0, 0, 0.5) !important;
     margin: 0;
     position: relative;
     left: 0;
-    animation: slideIn 2s forwards;
-    animation-fill-mode: forwards; /* Prevents animation reset */
+    opacity: 0;
+    animation: slideIn 1.5s ease-out forwards;
+    animation-fill-mode: forwards;
 }
 
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(0, 0, 0, 0.5);
     margin: 0;
     position: relative;
     left: 20px;
-    animation: slideInSeal 3.5s ease-out forwards; /* Slower but no delay */
-    animation-fill-mode: forwards; /* Prevents animation reset */
+    opacity: 0;
+    animation: slideIn 3.5s ease-out forwards; /* Slower animation */
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* ----------------------------
