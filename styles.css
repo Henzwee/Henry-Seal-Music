@@ -42,27 +42,20 @@ html, body {
     opacity: 0;
 }
 
-.name {
+.name, .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.5) /* Darker semi-transparent black */
+    color: rgba(0, 0, 0, 0.5) !important; /* Make text more transparent */
     margin: 0;
     position: relative;
     left: 0;
-    animation: slideIn 2s forwards;
+    display: block;
+    line-height: 1; /* Ensures even spacing */
 }
 
 .seal {
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.5) 
-    margin: 0;
-    position: relative;
     left: 20px;
-    top: -10px; /* Adjust this value to move SEAL back up */
-    animation: slideInSeal 3s forwards;
-    display: block;
-    line-height: 1; /* Ensures equal spacing */
+    top: -20px; /* Moves "SEAL" higher */
 }
 
 /* ----------------------------
