@@ -45,7 +45,7 @@ html, body {
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.6); /* Darker transparent black */
+    color: rgba(0, 0, 0, 0.7) !important; /* Force darker semi-transparent black */
     margin: 0;
     position: relative;
     left: 0;
