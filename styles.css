@@ -32,6 +32,16 @@ html, body {
     padding: 0 20px; /* Prevents text from touching edges on mobile */
 }
 
+/* Position header text */
+.text-container {
+    position: absolute;
+    top: 28% !important; /* Lowered slightly on desktop */
+    left: 20%;
+    transform: translateY(-50%);
+    text-align: center;
+    opacity: 0;
+}
+
 /* ----------------------------
    Animations
 ---------------------------- */
@@ -58,55 +68,26 @@ html, body {
 }
 
 /* ----------------------------
-   Header Text (Default for Mobile)
+   Header Text (Desktop)
 ---------------------------- */
-.name, .seal {
+.name {
     font-size: 6rem;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.78) !important; /* Adjusted opacity */
     margin: 0;
     position: relative;
-    animation-fill-mode: forwards;
-}
-
-.name {
     left: 0;
     animation: slideIn 2s ease-out forwards;
 }
 
 .seal {
-    left: 5px; /* Move SEAL slightly left */
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.78) !important; /* Adjusted opacity */
+    margin: 0;
+    position: relative;
+    left: 20px;
     animation: slideInSeal 3s ease-out forwards;
-}
-
-/* ----------------------------
-   Mobile Styles (Adjust Positioning)
----------------------------- */
-@media (max-width: 768px) {
-    .text-container {
-        top: 30% !important; /* Move text UP slightly on mobile */
-    }
-
-    .seal {
-        left: 0 !important; /* Align SEAL better on mobile */
-    }
-}
-
-/* ----------------------------
-   Desktop Styles (Force Proper Positioning)
----------------------------- */
-@media (min-width: 769px) {
-    .text-container {
-        top: 60% !important; /* Move text further DOWN on desktop */
-        left: 15% !important; /* Move text slightly LEFT */
-        transform: translateY(-50%);
-        text-align: center;
-        opacity: 0;
-    }
-
-    .seal {
-        left: 15px !important; /* Keep SEAL properly aligned */
-    }
 }
 
 /* ----------------------------
