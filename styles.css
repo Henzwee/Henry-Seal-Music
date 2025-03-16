@@ -60,7 +60,7 @@ html, body {
     margin: 0;
     position: relative;
     left: 20px;
-    animation: slideInSeal 3.5s ease-out forwards; /* Slower slide */
+    animation: slideInSeal 3.5s ease-out forwards; /* Slower but no delay */
     animation-fill-mode: forwards; /* Prevents animation reset */
 }
 
