@@ -1,4 +1,4 @@
- /* ----------------------------
+/* ----------------------------
    Global & Header Styles
 ---------------------------- */
 body {
@@ -42,27 +42,52 @@ html, body {
     opacity: 0;
 }
 
+/* ----------------------------
+   Animations
+---------------------------- */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInSeal {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ----------------------------
+   Header Text
+---------------------------- */
 .name {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.5); /* Keep the transparency */
+    color: rgba(0, 0, 0, 0.7); /* Slightly more transparent */
     margin: 0;
     position: relative;
     left: 0;
-    opacity: 0;
-    animation: slideIn 1.5s ease-out forwards;
+    animation: slideIn 2s ease-out forwards;
 }
 
 .seal {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.5); /* Keep the transparency */
+    color: rgba(0, 0, 0, 0.7); /* Slightly more transparent */
     margin: 0;
     position: relative;
     left: 20px;
-    opacity: 0;
-    animation: slideIn 1.5s ease-out forwards;
-    animation-delay: 0.8s; /* SEAL slides in later */
+    animation: slideInSeal 3s ease-out forwards; /* Slower but no delay */
 }
 
 /* ----------------------------
