@@ -11,23 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
         headerText.style.opacity = '1';
     }
 
-    // Animate HENRY first
+    // Animate HENRY first (No JS override of CSS)
     setTimeout(() => {
         if (henryText) {
             henryText.style.removeProperty('opacity'); // Let CSS handle opacity
-            henryText.style.animation = 'slideIn 1.5s ease-out forwards';
         }
     }, 200); // Small delay for a smoother load
-
-    // Animate SEAL later, ensuring no reset occurs
-    setTimeout(() => {
-        if (sealText) {
-            if (!sealText.classList.contains('animated')) { 
-                sealText.classList.add('animated'); // Prevent reanimation
-                sealText.style.animation = 'slideIn 1.5s ease-out forwards'; 
-            }
-        }
-    }, 800); // Delay SEAL so it moves in separately
 
     // Scroll-based text visibility effect for albums
     function handleScroll() {
