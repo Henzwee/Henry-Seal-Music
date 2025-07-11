@@ -263,5 +263,37 @@ function setFixedVH() {
       progressFilled.style.width = '0%';
       progressKnob.style.left    = '0%';
     });
+    // --- Form submission (contact page) ---
+const form = document.querySelector('.contact-form');
+const successMsg = document.getElementById('successMessage');
+const errorMsg = document.getElementById('errorMessage');
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        successMsg.style.display = 'block';
+        errorMsg.style.display = 'none';
+        form.reset();
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'block';
+    }
+  });
+}
   });
   
