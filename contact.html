@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Henry Seal Music | Contact</title>
+    <meta name="description" content="Get in touch with Henry Seal Music for booking, collaborations, press inquiries, or just to say hello. Reach out via email or social media.">
+    <meta name="keywords" content="Henry Seal contact, booking inquiries, music collaborations, press kit, email Henry Seal, indie artist contact">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-page">
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-left">HENRY SEAL<br> &nbsp;&nbsp;MUSIC</a>
+        <div class="nav-right">
+          <a href="index.html">HOME</a>
+          <a href="listen.html">LISTEN</a>
+          <a href="contact.html" class="active">CONTACT</a>
+        </div>
+    </nav>
+      
+    <!-- Background Video Layer -->
+<!-- contact.html & listen.html -->
+<div class="video-bg-wrapper">  <!-- or video-bg-wrapper -->
+    <!-- desktop version -->
+    <video 
+      class="header-video desktop" 
+      autoplay muted loop playsinline 
+      src="HeaderAnimation.mov"
+    ></video>
+  
+    <!-- mobile version -->
+    <video 
+      class="header-video mobile" 
+      autoplay muted loop playsinline 
+      src="HeaderAnimationMobile.mov"
+    ></video>
+  
+    <div class="header-overlay" id="headerOverlay"></div>
+  </div>  
+
+    <!-- Foreground Site Content -->
+    <div class="site-content">
+
+        <section class="contact-section">
+            <h1 class="contact-title">CONTACT</h1>
+            <p class="contact-subtitle">Let’s get in touch—and talk all things music.</p>
+          
+            <form 
+                class="contact-form" 
+                action="https://formspree.io/f/xkgbawez" 
+                method="POST"
+            >
+                <div class="name-fields">
+                    <input type="text" name="First Name" placeholder="FIRST NAME" required>
+                    <input type="text" name="Last Name" placeholder="LAST NAME" required>
+                </div>
+                <input type="email" name="Email" placeholder="EMAIL ADDRESS" required>
+                <input type="text" name="Subject" placeholder="REASON FOR CONTACT">
+                <textarea name="Message" placeholder="OTHER COMMENTS:" rows="6"></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+
+            <p id="successMessage" class="form-message success">Thanks! Your message was sent.</p>
+            <p id="errorMessage" class="form-message error">Oops! Something went wrong.</p>
+
+          </section>
+
+          <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                      HENRY SEAL<br>&nbsp;&nbsp;MUSIC
+                    </a>
+                  </div>
+                  
+              <div class="footer-icons-and-info">
+                <div class="footer-icons">
+                  <a href="https://music.apple.com/us/artist/henry-seal/1570957771" target="_blank" class="icon apple"></a>
+                  <a href="https://open.spotify.com/artist/2UKcn5sXqXYMCipnRYxpf5" target="_blank" class="icon spotify"></a>
+                  <a href="https://www.amazon.com/music/player/artists/B096QPSW2V/henry-seal" target="_blank" class="icon amazon"></a>
+                  <a href="https://music.youtube.com/channel/UCJNDcNmUEM78w5kxOeLwCYQ" target="_blank" class="icon youtube"></a>
+                </div>
+                <div class="footer-info">
+                    <p>2025 &nbsp;&nbsp;|&nbsp;&nbsp; <a href="mailto:henrysealmusic@gmail.com">henrysealmusic@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+          </footer>          
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
