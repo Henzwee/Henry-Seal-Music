@@ -188,7 +188,7 @@ if (form) {
               {
                 title: "Confessions",
                 album: "Public Outrage",
-                file: "website music/Confessions.mp3",
+                file: "website-music/Confessions.mp3",
                 image: "outrage.jpg",
                 lyrics: `I'm happy to pay for my shit\nBut sometimes I still don't\nHalf of the time I'm not broke\nJust rather spend my money on dope\n\nI waste all my time\nAnd ask the wrong questions\nIf my heart says it's fine\nI'll follow directions\n\nBut I tell nobody\nThey need not worry\n\nMy heart beats faster than it used to\nIt's catching up now\nI used to give others a chance\nBut it was too much a mental dance\n\nOh no\nI didn't plan this far\nIt's no show\nI really am bizarre\n\nBut I tell nobody\nThey need not worry\nI tell nobody\nThey need not worry\nI tell no—`
               },
