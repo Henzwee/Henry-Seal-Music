@@ -28,7 +28,7 @@ html, body {
     overflow: hidden;
 }
 
-#headerVideo {
+.header-video.desktop {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -920,7 +920,7 @@ h4 {
 
 @media (max-width: 768px) {
 
-    .header-video {
+    .header-video.desktop {
         position: fixed;
         top: 0;
         left: 0;
@@ -930,13 +930,14 @@ h4 {
         z-index: -2;
         display: none;
         object-position: 40% 50%;
-    }    
+    }  
 
-    .header-video.mobile {
-        display: block;
-        /* if you need to tweak framing further: */
-        object-position: 40% 50%;
-      }    
+.header-video.mobile {
+    display: block;
+    object-fit: cover;
+    object-position: 40% 50%;
+}
+   
 
     .text-container {
         top: 25% !important; /* Keep the original position on mobile */
