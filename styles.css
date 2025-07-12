@@ -1210,8 +1210,8 @@ h4 {
 
   /* shrink the brand text */
   .nav-left {
-    font-size: 1.5rem !important;
-    line-height: 1.2;
+    font-size: 1rem !important;
+    line-height: 1;
   }
 
   /* tighten up the links */
