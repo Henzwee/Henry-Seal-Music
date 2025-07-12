@@ -4,9 +4,13 @@ function handleHeaderVideoScroll() {
   const scrollY   = window.scrollY;
   const maxScroll = 1400;
   const darkness  = Math.min(scrollY / maxScroll, 1);
-  const video     = document.querySelector('.header-video') || document.querySelector('.header-video.mobile');
   const overlay   = document.getElementById('headerOverlay');
   const body      = document.body;
+  const video = Array.from(document.querySelectorAll('.header-video')).find(v => {
+    const style = window.getComputedStyle(v);
+    return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
+  });
+  
 
   if (!video || !overlay || !body) return;
 
@@ -16,13 +20,12 @@ function handleHeaderVideoScroll() {
     overlay.style.opacity = darkness;
   } else if (body.classList.contains('listen-page')) {
     video.style.filter = `blur(8px)`;
-    overlay.style.opacity = darkness; // ✅ fade to black on scroll
+    overlay.style.opacity = darkness;
   } else if (body.classList.contains('contact-page')) {
     video.style.filter = `blur(8px)`;
-    overlay.style.opacity = 0; // 🚫 no fade on contact page
-  }
+    overlay.style.opacity = 0;
+  }    
 }
-
 
 
 function setFixedVH() {
