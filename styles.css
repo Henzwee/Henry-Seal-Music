@@ -51,15 +51,6 @@ html, body {
     pointer-events: none; /* Prevent interaction */
 }
 
-/* contact page: 8px blur, no overlay fade */
-body.contact-page #headerVideo { filter: blur(8px) !important; }
-body.contact-page #headerOverlay { opacity: 0 !important; }
-
-/* listen page: 8px blur, overlay fades in */
-body.listen-page #headerVideo  { filter: blur(8px) !important; }
-body.listen-page #headerOverlay { transition: opacity .3s; /* JS still drives opacity */ }
-
-
 #headerOverlay {
     position: fixed;
     top: 0;
