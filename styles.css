@@ -1192,8 +1192,27 @@ h4 {
     font-size: 3rem;
   }  
 
-.nav-left {
-   font-size: 1.5rem;
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;    
+  }
+
+  /* shrink the brand text */
+  .nav-left {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+  }
+
+  /* tighten up the links */
+  .nav-right {
+    display: flex;          /* gap only works on flex/grid */
+    gap: 1.3rem !important;
+  }
+  .nav-right a {
+    font-size: 1rem;        /* optional: shrink link text */
+    padding: 0.25rem 0;     /* optional: reduce tap-area */
   }
 }
 
