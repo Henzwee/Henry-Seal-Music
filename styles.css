@@ -34,6 +34,7 @@ html, body {
     object-fit: cover;
     filter: blur(0px);
     transition: filter 0.2s ease;
+    display: block;
 }
 
 .header-video.mobile {
@@ -50,7 +51,7 @@ html, body {
     overflow: hidden;
     pointer-events: none; /* Prevent interaction */
 }
-
+  
 #headerOverlay {
     position: fixed;
     top: 0;
@@ -928,6 +929,7 @@ h4 {
         object-fit: cover;
         z-index: -2;
         display: none;
+        object-position: 40% 50%;
     }    
 
     .header-video.mobile {
@@ -942,7 +944,7 @@ h4 {
 
     .name {
         font-size: 3rem;
-        margin-right: 5rem;
+        margin-right: 7rem;
     }
 
     .seal {
@@ -973,6 +975,19 @@ h4 {
         flex: 0 0 60%;       
       }
     
+        
+      .bio-body {
+        font-size: .8rem;
+      }
+
+      .about-label {
+        font-size: .8rem;
+      } 
+
+      .artist-name {
+        font-size: 2rem;
+      }
+
       /* 4) Photo: fill its half exactly (no border, no rounding on image itself) */
       .bio-image img {
         width: 100% !important;
@@ -1158,11 +1173,6 @@ h4 {
   font-size: 1.8rem;      /* down from 2rem */
 }
 
-/* 4) reposition the background video crop */
-.header-video {
-    object-position: 40% 50%;  /* fiddle these % until the guitar is perfect */
-  }
-
   .listen-page .album-carousel img {
     width: 100% !important;
     height: auto !important;
@@ -1191,7 +1201,6 @@ h4 {
     margin-bottom: 2rem;  /* give it breathing room before the carousel */
     font-size: 3rem;
   }  
-
   .navbar {
     display: flex;
     align-items: center;
@@ -1201,7 +1210,7 @@ h4 {
 
   /* shrink the brand text */
   .nav-left {
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
     line-height: 1.2;
   }
 
@@ -1211,8 +1220,8 @@ h4 {
     gap: 1.3rem !important;
   }
   .nav-right a {
-    font-size: 1rem;        /* optional: shrink link text */
-    padding: 0.25rem 0;     /* optional: reduce tap-area */
+    font-size: 1rem;        /* shrink link text */
+    padding: 0.25rem 0;     /* reduce tap-area */
   }
 }
 
