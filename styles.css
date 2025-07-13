@@ -920,22 +920,21 @@ h4 {
 
 @media (max-width: 768px) {
 
-    .header-video.desktop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -2;
-        display: none;
-        object-position: 40% 50%;
-    }  
+  .header-video.desktop {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    object-position: 20% 50% !important;
+    z-index: -2;
+  }  
 
 .header-video.mobile {
-    display: block;
-    object-fit: cover;
-    object-position: 40% 50%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
    
 
