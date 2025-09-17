@@ -57,36 +57,46 @@ document.addEventListener('DOMContentLoaded', () => {
   setFixedVH();
   window.addEventListener('resize', setFixedVH);
 
-  // Contact form logic
-  const form = document.querySelector('.contact-form');
-  const successMsg = document.getElementById('successMessage');
-  const errorMsg = document.getElementById('errorMessage');
+// Contact form logic
+const form        = document.querySelector('.contact-form');
+const successMsg  = document.getElementById('successMessage');
+const errorMsg    = document.getElementById('errorMessage');
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-        if (response.ok) {
-          successMsg.style.display = 'block';
-          errorMsg.style.display = 'none';
-          form.reset();
-        } else {
-          throw new Error('Submission failed');
-        }
-      } catch (error) {
-        successMsg.style.display = 'none';
-        errorMsg.style.display = 'block';
+if (form && successMsg && errorMsg) {
+  // hide on init
+  successMsg.classList.remove('show');
+  errorMsg.classList.remove('show');
+
+  const submitBtn = form.querySelector('[type="submit"]');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successMsg.classList.remove('show');
+    errorMsg.classList.remove('show');
+
+    // disable to prevent double clicks
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method || 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg.classList.add('show');
+        form.reset();
+      } else {
+        errorMsg.classList.add('show');
       }
-    });
-  }
+    } catch {
+      errorMsg.classList.add('show');
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+}
 
   // Stop if not listen page
   if (!document.body.classList.contains('listen-page')) return;
