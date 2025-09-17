@@ -613,7 +613,7 @@ h4 {
   }
   
   .form-message.success {
-    color: #90ee90; /* Light green */
+    color: white; 
   }
   
   .form-message.error {
