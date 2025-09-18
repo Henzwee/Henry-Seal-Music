@@ -37,6 +37,10 @@ html, body {
     display: block;
 }
 
+.header-video { 
+   pointer-events: none; 
+}
+
 .header-video.mobile {
     display: none;
   }
