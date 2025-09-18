@@ -21,23 +21,38 @@
     </nav>
       
 <!-- index.html -->
-<div class="video-background">  <!-- or video-bg-wrapper -->
-    <!-- desktop version -->
-    <video 
-      class="header-video desktop" 
-      autoplay muted loop playsinline 
-      src="HeaderAnimation.mp4"
-    ></video>
-  
-    <!-- mobile version -->
-    <video 
-      class="header-video mobile" 
-      autoplay muted loop playsinline 
-      src="HeaderAnimationMobile.mp4"
-    ></video>
-  
-    <div class="header-overlay" id="headerOverlay"></div>
-  </div>  
+<div class="video-background">
+  <!-- desktop version -->
+  <video 
+    class="header-video desktop"
+    autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto"
+    poster="fallback.jpg"
+  >
+    <source src="HeaderAnimation.mp4" type="video/mp4">
+  </video>
+
+  <!-- mobile version -->
+  <video 
+    class="header-video mobile"
+    autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto"
+    poster="fallback-mobile.jpg"
+  >
+    <source src="HeaderAnimationMobile.mp4" type="video/mp4">
+  </video>
+
+  <div class="header-overlay" id="headerOverlay"></div>
+</div>
+
   
     <!-- Foreground Site Content -->
     <div class="site-content">
