@@ -122,6 +122,7 @@ html, body {
          tweak the first percentage to pan left/right */
       object-position: 20% 50% !important;
       z-index: -2;
+      pointer-events: none;
     }
 }
 
