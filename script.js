@@ -51,6 +51,34 @@ function handleScroll(albumTexts) {
 // ——— Main initialization ———
 
 document.addEventListener('DOMContentLoaded', () => {
+// ---- Ensure background video autoplays on mobile ----
+const pickBgVideo = () =>
+  window.matchMedia('(max-width:768px)').matches
+    ? document.querySelector('.header-video.mobile')
+    : document.querySelector('.header-video.desktop');
+
+async function ensureBgAutoplay() {
+  const v = pickBgVideo();
+  if (!v) return;
+
+  // Belt + suspenders: set attrs & props before play
+  v.setAttribute('muted', '');
+  v.setAttribute('playsinline', '');
+  v.setAttribute('webkit-playsinline', '');
+  v.muted = true;
+  v.playsInline = true;
+
+  const tryPlay = () => v.play().catch(() => { /* some webviews need a tap */ });
+
+  if (v.readyState >= 2) tryPlay();
+  else v.addEventListener('canplay', tryPlay, { once: true });
+}
+
+ensureBgAutoplay();
+window.addEventListener('resize', ensureBgAutoplay);
+window.addEventListener('orientationchange', ensureBgAutoplay);
+
+  
   handleHeaderVideoScroll();
   window.addEventListener('scroll', handleHeaderVideoScroll);
   window.addEventListener('load', handleHeaderVideoScroll);
