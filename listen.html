@@ -152,5 +152,19 @@
     </div>
 
     <script src="script.js"></script>
+        <script src="script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const video = matchMedia('(max-width:768px)').matches
+    ? document.querySelector('.header-video.mobile')
+    : document.querySelector('.header-video.desktop');
+  if (!video) return;
+  video.muted = true; video.playsInline = true;
+  const play = () => video.play().catch(()=>{});
+  if (video.readyState >= 2) play();
+  else video.addEventListener('canplay', play, { once: true });
+});
+</script>
+
 </body>
 </html>
